@@ -1,0 +1,211 @@
+* {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body {
+  background-color: var(--dark);
+}
+
+:root {
+  --dark: #393a3b;
+  --light-tomato: #ff8b77;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 5%;
+  align-items: center;
+  background-color: var(--dark);
+}
+
+header h1 {
+  background-color: tomato;
+}
+
+a {
+  color: tomato;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 20em;
+  font-size: 25px;
+  font-weight: bold;
+}
+ul {
+  list-style: none;
+}
+
+/* gives hover effect to in site bookmarks */
+nav ul li a:hover {
+  color: var(--light-tomato);
+  border-radius: 6px;
+}
+
+/* Top banner with background image of cacti */
+.banner {
+  background-image: url("assets/images/cactus-hero-picture.jpg");
+  text-indent: 50px;
+  padding: 10px 0;
+}
+
+/* Styles text within banner */
+.banner span {
+  background-color: var(--dark);
+  border-radius: 4px;
+  font-size: 50px;
+  color: white;
+  text-shadow: 2px 2px tomato;
+}
+
+/* Makes all images keep their correct aspect ratios while being changed in size */
+img {
+  object-fit: cover;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+}
+
+/* Lines up and centers small paragraph about myself and my picture */
+.about-me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.about-me p {
+  max-width: 400px;
+  font-size: 20px;
+}
+
+/* Keeps picture of myself in a reasonable size and adds a glow */
+.about-me img {
+  border-radius: 20px;
+  box-shadow: 0 0 40px tomato;
+  width: 30%;
+  height: 100%;
+}
+
+/* Used on each section to format them properly */
+.section-flex {
+  display: flex;
+  justify-content: space-between;
+  padding: 5% 10%;
+}
+
+/* Used to add a border between the content and label of each section */
+.divider {
+  border-right: 4px solid var(--dark);
+  padding: 0 20px 0 0;
+}
+
+section h2 {
+  font-size: 40px;
+  color: var(--dark);
+}
+
+section p {
+  width: 600px;
+}
+
+/* background colors for sections so they alternate */
+.gray-bg {
+  background-color: lightgray;
+}
+
+.white-bg {
+  background-color: white;
+}
+
+/* Area for tidy display of projects */
+.project-display {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 70%;
+  max-height: 900px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+/* Used to shape each project for easier placement in a square */
+.project-card {
+  width: 48%;
+  height: 30%;
+  border: 5px solid var(--light-tomato);
+  border-radius: 4px;
+  opacity: 0.8;
+}
+/* For the required larger image on one or "main" project */
+.large-project-card {
+  width: 100%;
+  height: 40%;
+  border: 5px solid var(--light-tomato);
+  border-radius: 4px;
+  opacity: 0.8;
+}
+
+/* fills in area of li completely making css more manageable */
+.project-card img, .large-project-card img {
+  height: 100%;
+  width: 100%;
+}
+
+/* Adds a glow and more vibrant picture when hovering over each project */
+.project-card:hover, .large-project-card:hover {
+  opacity: 1;
+  box-shadow: 0 0 30px tomato;
+  border: 5px solid tomato;
+}
+
+/* Creates pill shaped container with light red border and space for icons */
+.contact-card {
+  display: flex;
+  background-color: white;
+  border: 2px solid var(--light-tomato);
+  border-radius: 90px;
+  padding: 10px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-card ul {
+  display: flex;
+  padding: 0;
+  gap: 15px;
+}
+
+.contact-card p {
+  font-weight: bold;
+  font-size: 25px;
+  width: 100%;
+}
+
+.contact-card a img {
+  width: 50px;
+  height: 50px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+@media screen and (max-width: 1350px) {
+  /* Allows project list to scroll when display is too narrow and causes overflow */
+  .project-display {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 70%;
+    max-height: 900px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    overflow-y: scroll;
+  }
+}
